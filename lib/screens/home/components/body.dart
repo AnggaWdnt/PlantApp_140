@@ -17,18 +17,21 @@ class Body extends StatelessWidget {
           HeaderWithSearchBox(size: size),
           TitleWithMoreBtn(title: "Recommended",press: () {},),
           RecomendsPlants(),TitleWithMoreBtn(title: "Featured Plants",press: (){}),
-            Row(
-              children: [
-                FeaturePlantCard(image: "assets\images\mawar.jpg", 
-                press: () {},
-                ),
-                FeaturePlantCard(image: "assets\images\mawar.jpg", 
-                press: () {},
-                ),
-                FeaturePlantCard(image: "assets\images\mawar.jpg", 
-                press: () {},
-                ),
-              ],
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  FeaturePlantCard(image: "assets\images\mawar.jpg", 
+                  press: () {},
+                  ),
+                  FeaturePlantCard(image: "assets\images\mawar.jpg", 
+                  press: () {},
+                  ),
+                  FeaturePlantCard(image: "assets\images\mawar.jpg", 
+                  press: () {},
+                  ),
+                ],
+              ),
             ),
         ],
       ),
