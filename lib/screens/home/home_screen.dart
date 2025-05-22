@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:plantapp_140/screens/home/components/body.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -14,7 +15,7 @@ class HomeScreen extends StatelessWidget {
     return AppBar(
       elevation: 0,
       leading: IconButton(
-        icon: SvgPicture.asset(),
+        icon: SvgPicture.asset("assets\icons\menu.svg"),
         onPressed: () {},
         ),
     );
