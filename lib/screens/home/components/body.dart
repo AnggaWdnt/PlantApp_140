@@ -41,15 +41,24 @@ class Body extends StatelessWidget {
                     ),
                     ],
                   ),
-                  child: TextField(
-                    decoration: InputDecoration(
-                      hintText: "Search",
-                      hintStyle: TextStyle(
-                        color: kPrimaryColor.withOpacity(0.5),    
-                     ),
-                     enabledBorder: InputBorder.none,
-                     focusedBorder: InputBorder.none, 
-                    ),
+                  child: Row(
+                    children: <Widget> [
+                      Expanded(
+                        child: TextField(
+                          onChanged: (value) {},
+                          decoration: InputDecoration(
+                            hintText: "Search",
+                            hintStyle: TextStyle(
+                              color: kPrimaryColor.withOpacity(0.5),    
+                           ),
+                           enabledBorder: InputBorder.none,
+                           focusedBorder: InputBorder.none, 
+                           suffixIcon:
+                          ),
+                        ),
+                      ),
+                      SvgPicture.asset("assets/icons/search.svg")
+                    ],
                   ),
                 ),
                 ),
