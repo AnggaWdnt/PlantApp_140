@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:plantapp_140/constants.dart';
-import 'package:plantapp_140/screens/home/components/home_screen.dart';
+import 'package:plantapp_140/screens/home/home_screen.dart';
 
 void main() {
   runApp(const MyApp());
