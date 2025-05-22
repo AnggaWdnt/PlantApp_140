@@ -13,6 +13,43 @@ class Body extends StatelessWidget {
       child: Column(
         children: <Widget>[
           ImageAndIcon(size: size),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
+            child: Row(
+              children: <Widget>[
+               RichText(
+                text: TextSpan(
+                  children: [
+                    TextSpan(
+                      text: "Cactus\n", 
+                      style: Theme.of(context)
+                      .textTheme
+                      .headlineSmall
+                      ?.copyWith(
+                        color: kTextColor,
+                        fontWeight: FontWeight.bold),
+                        ),
+                        TextSpan(
+                          text: "Amerika", 
+                          style: TextStyle(
+                            fontSize: 20, 
+                            color: kPrimaryColor,
+                            fontWeight: FontWeight.w300,
+                        ),
+                      ),
+                  ],
+                ),
+                ),
+                Spacer(),
+                Text("\Rp25000", 
+                style: Theme.of(context)
+                .textTheme
+                .headlineSmall
+                ?.copyWith(color: kPrimaryColor),
+                ),
+             ],
+            ),
+          )
         ],
       ),
     );
