@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:plantapp_140/screens/details/details_screen.dart';
 
 import '../../../constants.dart';
 
@@ -18,21 +19,39 @@ class RecomendsPlants extends StatelessWidget {
             title: 'Cactus', 
             country: 'Amerika', 
             price: 25000, 
-            press: () {},
+            press: () {
+              Navigator.push(
+                context, MaterialPageRoute(
+                  builder: (context) => DetailsScreen(),
+              ),
+              );
+            },
           ),
           RecomendPlantCard(
             image: 'assets\images\cactus.jpg', 
             title: 'Cactus', 
             country: 'Amerika', 
             price: 25000, 
-            press: () {},
+            press: () {
+              Navigator.push(
+                context, MaterialPageRoute(
+                  builder: (context) => DetailsScreen(),
+              ),
+              );
+            },
           ),
           RecomendPlantCard(
             image: 'assets\images\cactus.jpg', 
             title: 'Cactus', 
             country: 'Amerika', 
             price: 25000, 
-            press: () {},
+            press: () {
+              Navigator.push(
+                context, MaterialPageRoute(
+                  builder: (context) => DetailsScreen(),
+              ),
+              );
+            },
           ),
         ],
       ),
