@@ -19,20 +19,38 @@ class Body extends StatelessWidget {
             country: 'Amerika', 
             price: 25000
             ),
+            SizedBox(
+              height: kDefaultPadding
+            ),
             Row(
               children: <Widget>[
                 SizedBox(
                   width: size.width / 2,
                   height: 84,
                   child: FloatingActionButton(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.only(
+                        topRight: Radius.circular(20),
+                    ),
+                    ),
                     color: kPrimaryColor,
                     onPressed: (){},
                     child: Text("Buy Now",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 16,
                     ),
                     ),
-                )
+                    ),
+                ),
+                Expanded(
+                  child: FloatingActionButton(
+                    onPressed: (){},
+                    child: Text("Descripsion"),
+                ),
+                ),
               ],
-            )
+            ),
         ],
       ),
     );
