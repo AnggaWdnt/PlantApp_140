@@ -12,20 +12,44 @@ class Body extends StatelessWidget {
           height: size.height * 0.8,
           child: Row(
             children: <Widget>[
-              Expanded(child: Column(
-                children: <Widget>[
-                  Align(
-                    alignment: Alignment.topLeft,
-                    child: IconButton(
-                      padding: EdgeInsets.symmetric(horizontal: kDefaultPadding),
-                     icon: SvgPicture.asset("assets\icons\backarrow.svg"),
-                     onPressed: () {
-                      Navigator.pop(context);
-                     },
-                     ),
+              Expanded(
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(vertical: kDefaultPadding * 3),
+                  child: Column(
+                  children: <Widget>[
+                    Align(
+                      alignment: Alignment.topLeft,
+                      child: IconButton(
+                        padding: EdgeInsets.symmetric(horizontal: kDefaultPadding),
+                       icon: SvgPicture.asset("assets\icons\backarrow.svg"),
+                       onPressed: () {
+                        Navigator.pop(context);
+                       },
+                       ),
+                    ),
+                    Spacer(),
+                    Container(
+                      height: 62, 
+                      width: 62,
+                      decoration: BoxDecoration(
+                        color: kBackgorundColor,
+                        borderRadius: BorderRadius.circular(6),
+                        boxShadow: [
+                          BoxShadow(
+                            offset: Offset(0, 15),
+                            blurRadius: 22,
+                            color: kPrimaryColor.withOpacity(0.22),
+                        ),
+                          BoxShadow(
+                            offset: Offset(-15, -15),
+                            blurRadius: 20,
+                            color: Colors.white
+                        ),
+                        ],
+                      ),
+                      )
+                   ],
                   ),
-                  Spacer(),
-                 ],
                 ),
               ),
               Container(height: size.height * 0.8,
