@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:plantapp_140/constants.dart';
 
 class Body extends StatelessWidget {
@@ -9,7 +10,16 @@ class Body extends StatelessWidget {
       children: <Widget>[
         Row(
           children: <Widget>[
-            Expanded(child: Column(),
+            Expanded(child: Column(
+              children: <Widget>[
+                IconButton(
+                 icon: SvgPicture.asset("assets\icons\backarrow.svg"),
+                 onPressed: () {
+                  Navigator.pop(context);
+                 },
+                 ),
+               ],
+              ),
             ),
             Container(height: size.height * 0.8,
             width: size.width * 0.75,
