@@ -28,11 +28,11 @@ class HomeScreen extends StatelessWidget {
         onPressed: (){},
         ),
         IconButton(
-        icon: SvgPicture.asset("assets\icons\flower.svg"), 
+        icon: SvgPicture.asset("assets\icons\heart.svg"), 
         onPressed: (){},
         ),
         IconButton(
-        icon: SvgPicture.asset("assets\icons\flower.svg"), 
+        icon: SvgPicture.asset("assets\icons\user.svg"), 
         onPressed: (){},
         ),
         ],
