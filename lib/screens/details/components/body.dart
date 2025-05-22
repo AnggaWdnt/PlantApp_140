@@ -17,8 +17,22 @@ class Body extends StatelessWidget {
           TitleAndPrice(
             title: 'Cactus', 
             country: 'Amerika', 
-            price: 25000,
+            price: 25000
             ),
+            Row(
+              children: <Widget>[
+                SizedBox(
+                  width: size.width / 2,
+                  height: 84,
+                  child: FloatingActionButton(
+                    color: kPrimaryColor,
+                    onPressed: (){},
+                    child: Text("Buy Now",
+                    ),
+                    ),
+                )
+              ],
+            )
         ],
       ),
     );
