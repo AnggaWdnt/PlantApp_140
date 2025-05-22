@@ -11,13 +11,46 @@ class Body extends StatelessWidget {
       child: Column(
         children: <Widget>[
           HeaderWithSearchBox(size: size),
-          Row(
-            children: [
-              TitleWithCustomUnderline(text:"Recomended"),
+          TitleWithMoreBtn(
+            title: "Recomended", 
+            press: (){},
+            ),
+            child: 
+            Row(
+            children: <Widget>[
+              TitleWithCustomUnderline(text: Title),
+              Spacer(),
+              FloatingActionButton(
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20),
+                ),
+                color: kPrimaryColor,
+                onPressed: press,
+                child: Text(
+                  "More", 
+                  style: TextStyle(color: Colors.white),
+                ),
+              ),
             ],
           ),
         ],
       ),
+    );
+  }
+}
+
+class TitleWithMoreBtn extends StatelessWidget {
+  const TitleWithMoreBtn({
+    super.key, 
+    required this.title, 
+    required this.press,
+  });
+  final String title;
+  final String press;
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
     );
   }
 }
