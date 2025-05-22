@@ -1,16 +1,17 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:plantapp_140/constants.dart';
 
 class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    return Column(
-      children: <Widget>[
-        HeaderWithSearchBox(size: size)
-      ],
+    return SingleChildScrollView(
+      child: Column(
+        children: <Widget>[
+          HeaderWithSearchBox(size: size)
+        ],
+      ),
     );
   }
 }
@@ -21,11 +22,12 @@ class HeaderWithSearchBox extends StatelessWidget {
     required this.size,
   });
 
-  final  size;
+  final Size size;
 
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: EdgeInsets.only(bottom: kDefaultPadding * 2.5),
       padding: EdgeInsets.only(
         left: kDefaultPadding,
         right: kDefaultPadding,
@@ -60,6 +62,7 @@ class HeaderWithSearchBox extends StatelessWidget {
             child: Container(
               alignment: Alignment.center,
               margin: EdgeInsets.symmetric(horizontal: kDefaultPadding),
+              padding: EdgeInsets.symmetric(horizontal: kDefaultPadding),
               height: 54,
               decoration: BoxDecoration(
                 color: Colors.white,
@@ -68,7 +71,7 @@ class HeaderWithSearchBox extends StatelessWidget {
                   offset: Offset(0, 10),
                   blurRadius: 50,
                   color: kPrimaryColor.withOpacity(0.23),
-                ),
+                  ),
                 ],
               ),
               child: Row(
@@ -83,11 +86,12 @@ class HeaderWithSearchBox extends StatelessWidget {
                        ),
                        enabledBorder: InputBorder.none,
                        focusedBorder: InputBorder.none, 
-                       suffixIcon:
+                      //  suffixIcon:
+                      // SvgPicture.asset("assets/icons/search.svg"),
                       ),
                     ),
                   ),
-                  SvgPicture.asset("assets/icons/search.svg")
+                  SvgPicture.asset("assets\icons\search.svg"),
                 ],
               ),
             ),
