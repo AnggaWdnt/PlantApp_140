@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:plantapp_140/constants.dart';
 import 'package:plantapp_140/screens/home/components/header_with_searchboy.dart';
 
