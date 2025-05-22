@@ -3,6 +3,8 @@ import 'package:flutter_svg/svg.dart';
 import 'package:plantapp_140/constants.dart';
 import 'package:plantapp_140/screens/home/components/header_with_searchboy.dart';
 
+import 'title_with_more_bttn.dart';
+
 class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -12,9 +14,38 @@ class Body extends StatelessWidget {
         children: <Widget>[
           HeaderWithSearchBox(size: size),
           TitleWithMoreBtn(
-            title: "Recomended", 
-            press: (){},
-            ),
+            title: "Recomended", press: (){}),
+            Container(
+              width: size.width * 0.4,
+              child: Column(
+                children: <Widget>[
+                  Image.asset("assets\images\cactus.jpg"),
+                  Container(
+                    margin: EdgeInsets.only(left: kDefaultPadding, top: kDefaultPadding / 2,
+                    bottom: kDefaultPadding * 2.5,
+                    ),
+                    padding: EdgeInsets.all(kDefaultPadding / 2),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      boxShadow: [
+                        BoxShadow(
+                          offset: Offset(0, 10),
+                          blurRadius: 50,
+                          color: kPrimaryColor.withOpacity(0.23)
+                          ),
+                        ],
+                     ),
+                     child: Row(
+                      children: <Widget>[
+                        RichText(text: TextSpan(children: [],
+                        ),
+                        ),
+                      ],
+                     ),
+                   )
+                 ]
+               ),
+              ),
             child: 
             Row(
             children: <Widget>[
@@ -32,58 +63,6 @@ class Body extends StatelessWidget {
               ),
             ],
           ),
-        ],
-      ),
-    );
-  }
-}
-
-class TitleWithMoreBtn extends StatelessWidget {
-  const TitleWithMoreBtn({
-    super.key, 
-    required this.title, 
-    required this.press,
-  });
-  final String title;
-  final String press;
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
-    );
-  }
-}
-
-class TitleWithCustomUnderline extends StatelessWidget {
-  const TitleWithCustomUnderline({
-    super.key, required this.text,
-  });
-
-  final String text;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: 24,
-      child: Stack(
-        children: <Widget>[
-          Padding(
-            padding: const EdgeInsets.only(left: kDefaultPadding / 4),
-            child: Text("Recomended",
-            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-            ),
-          ),
-          Positioned(
-            bottom: 0,
-            left: 0,
-            right: 0,
-            child: Container(
-              margin: EdgeInsets.only(right: kDefaultPadding / 4),
-              height: 7, 
-              color: kPrimaryColor.withOpacity(0.2),
-            ),
-          )
         ],
       ),
     );
