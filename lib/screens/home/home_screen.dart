@@ -10,6 +10,11 @@ class HomeScreen extends StatelessWidget {
       appBar: buildAppBar(),
       body: Body(),
       bottomNavigationBar: Container(
+        padding: EdgeInsets.only(
+        left: kDefaultPadding * 2, 
+        right: kDefaultPadding * 2,
+        bottom: kDefaultPadding,
+        ),
         height: 80,
         decoration: BoxDecoration(
           color: Colors.white,
@@ -22,6 +27,7 @@ class HomeScreen extends StatelessWidget {
         ],
       ),
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: <Widget>[
         IconButton(
         icon: SvgPicture.asset("assets\icons\flower.svg"), 
