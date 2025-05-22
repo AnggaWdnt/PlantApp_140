@@ -29,6 +29,8 @@ class Body extends StatelessWidget {
                     ),
                     Spacer(),
                     Container(
+                      margin: EdgeInsets.symmetric(vertical: size.height * 0.03),
+                      padding: EdgeInsets.all(kDefaultPadding / 2),
                       height: 62, 
                       width: 62,
                       decoration: BoxDecoration(
@@ -47,6 +49,7 @@ class Body extends StatelessWidget {
                         ),
                         ],
                       ),
+                      child: SvgPicture.asset("assets\icons\matahari.svg"),
                       )
                    ],
                   ),
